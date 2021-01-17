@@ -11,7 +11,8 @@ import { Button } from "../../components/button";
 import { Marginer } from "../../components/marginer";
 import { deviceSize } from "../../components/responsive";
 import { Link } from "react-router-dom";
-// import { OurEvent } from "../../components/ourEvent/";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -69,10 +70,22 @@ const SloganText = styled.h3`
     font-size: 24px;
   }
 `;
+const SloganTextDetail = styled.h4`
+  margin: 0;
+  line-height: 1.4;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 24px;
+  }
+  width: 100%;
+  height: 100%;
+`;
 
 const ServiceThumbnail = styled.div`
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 
   img {
     width: 100%;
@@ -156,6 +169,9 @@ export function EventDetail(props) {
   let styles = {
     margin: "40px",
   };
+  let stylesButton = {
+    margin: "4px",
+  };
 
 
 
@@ -200,13 +216,18 @@ export function EventDetail(props) {
 
                         <SloganText>{title}</SloganText>
                         <Marginer direction="vertical" margin={15} />
-                        <Link to="/customer/access/signup">
-                          <Button>Join Now</Button>
-                        </Link>
+                        <div style={stylesButton}>
+                          <Link to="/customer/access/signup">
+                            <Button>Join Now and Get 200 <FontAwesomeIcon icon={faStar} size="sm" /></Button>
+                          </Link>
+
+                        </div>
+
+                       <SloganTextDetail>{detail}</SloganTextDetail> 
                       </div>
                     </ServiceThumbnail>
                     <ServiceThumbnail>
-                    {detail}
+                   
                     </ServiceThumbnail>
                   </Paper>
                 </Grid>
