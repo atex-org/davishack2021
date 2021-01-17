@@ -1,10 +1,14 @@
-const express = require('express');
+var express = require('express')
+  , http = require('http')
+  , app = express()
+  , server = http.createServer(app);
+
 require('dotenv').config();
 const cors = require('cors');
 const bodyParser = require('body-parser'); 
 const connectDatabase = require('./config/database');
 const authRoute = require('./routes/auth');
-const app = express();
+// const app = express();
 
 
 app.use(cors()); 
@@ -21,6 +25,13 @@ connectDatabase();
 
 const port = process.env.PORT || 7000
 
+app.set('port', process.env.PORT || 3000);
+app.set('host', "localhost" || '34.94.79.201');
+
 app.listen(port, () => {
-    console.log(`Server is running on ${port}`)
+  console.log(`Server is running on ${port}`)
 })
+
+http.createServer(app).listen(app.get('port'), app.get('host'), function(){
+  console.log("Express server listening on port " + app.get('port'));
+});

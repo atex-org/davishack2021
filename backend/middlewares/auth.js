@@ -2,21 +2,6 @@ const express = require('express');
 const jwt = require('jsonwebtoken'); 
 const User = require('../models/user');
 
-// exports.currentUser = async (req,res) => {
-//     if(!req.session.jwt){
-//         res.send({
-//             message: "toang cmnr",
-//         })
-//     }
-
-//     try{
-//         const payload = jwt.verify(req.session.jwt, process.env.appKey);
-//         req.user = await User.findById(payload._id); 
-//     }
-//     catch(e){
-//         console.log(e)
-//     }
-// }
 
 
 require('dotenv').config();
