@@ -88,8 +88,8 @@ const ServiceThumbnail = styled.div`
   height: 100%;
 
   img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
   }
   display: flex;
   justify-content: space-between;
@@ -172,12 +172,27 @@ export function EventDetail(props) {
   let stylesButton = {
     margin: "4px",
   };
+  let stylesButtonTk = {
+    margin: "4px",
+    display: "none"
+  };
+  let stylesButtonFollowed = {
+    margin: "4px",
+    display: "none"
+  };
 
 
+  const submitFollow = (e) => {
+    document.getElementById("idFollow").style.display = 'none';
+    document.getElementById("idThankyou").style.display = 'inline';
+    document.getElementById("idFollowed").style.display = 'inline';
+    //.value= "Thank so much for you for joinning us ";
+}
 
 
   console.log(offeredEvent);
   // Hoan Load Event Details
+
   return (
     <TopSectionContainer>
       <Navbar />
@@ -205,20 +220,31 @@ export function EventDetail(props) {
                           textSize={isMobile ? 35 : 55}
                           logoSize={isDestop ? 70 : 100}
                           textSize={isDestop ? 70 : 100}
-                          Marginer ={"30px"}
+                          Marginer ={"10px"}
                         />
 
                         <Marginer direction="vertical" margin={15} />
 
                       
 
-                        
-
+                
                         <SloganText>{title}</SloganText>
                         <Marginer direction="vertical" margin={15} />
-                        <div style={stylesButton}>
-                          <Link to="/customer/access/signup">
+                        <div style={stylesButton} id="idFollow">
+                          <Link onClick={submitFollow} >
                             <Button>Join Now and Get 200 <FontAwesomeIcon icon={faStar} size="sm" /></Button>
+                          </Link>
+
+                        </div>
+                        <div style={stylesButtonTk} id="idThankyou">
+                          <Link onClick={submitFollow} >
+                            <Button>Thank you for joining us <FontAwesomeIcon icon={faStar} size="sm" /></Button>
+                          </Link>
+
+                        </div>
+                        <div style={stylesButtonFollowed} id="idFollowed">
+                          <Link onClick={submitFollow} >
+                            <Button>Followed by you, loc_tran and 2 others <FontAwesomeIcon icon={faStar} size="sm" /></Button>
                           </Link>
 
                         </div>
