@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { fade, makeStyles } from "@material-ui/core/styles";
+import LogoImg from "../../images/logos/logo4.png";
 
 const TopSectionContainer = styled.div`
   width: 100%;
@@ -70,12 +71,19 @@ const SloganText = styled.h3`
 `;
 
 const ServiceThumbnail = styled.div`
-  width: 100%;
+  width: 50%;
   height: 50%;
 
   img {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  display: flex;
+  justify-content: space-between;
+  div {
+    width: 100%;
+    height: 100%;
+    margin-left: 4em;
   }
 `;
 
@@ -97,16 +105,19 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: "left",
   },
   grid: {
-    // backgroundColor: fade(theme.palette.common.white, 0.15),
-    // '&:hover': {
-    //   backgroundColor: fade(theme.palette.common.white, 0.25),
-    // },
+    display: "inline-flex",
   },
 }));
+
+const StyledLink = styled(Link)`
+  margin-left: 60px;
+  text-decoration: none;
+`;
 
 export function EventDetail(props) {
   const { children } = props;
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
+  const isDestop = useMediaQuery({ maxWidth: deviceSize.desktop });
   const { id } = useParams();
   const classes = useStyles();
 
@@ -119,7 +130,7 @@ export function EventDetail(props) {
   const fetchEvent = async () => {
     const response = await Axios.get(
       "https://atex.org/api/events/" + id ||
-      "http://localhost:7001/api/events/" + id
+        "http://localhost:7001/api/events/" + id
     ).catch((err) => {
       console.log("Error: ", err);
     });
@@ -136,10 +147,18 @@ export function EventDetail(props) {
     title,
     thumbnailUrl,
     eventname,
+    detail,
     rating,
     date_time,
     location,
   } = offeredEvent;
+
+  let styles = {
+    margin: "40px",
+  };
+
+
+
 
   console.log(offeredEvent);
   // Hoan Load Event Details
@@ -160,40 +179,41 @@ export function EventDetail(props) {
                     className={classes.paper}
                     alignItems="left"
                     elevation={3}
+                    span={3}
                   >
-                    <card>
-                      <ServiceThumbnail>
-                        <img src={thumbnailUrl} alt={title} />
-                      </ServiceThumbnail>
+                    <ServiceThumbnail>
+                      <img src={thumbnailUrl} alt={title} />
+                      <div style={styles}>
+                        <BrandLogo
+                          logoSize={isMobile ? 50 : 65}
+                          textSize={isMobile ? 35 : 55}
+                          logoSize={isDestop ? 70 : 100}
+                          textSize={isDestop ? 70 : 100}
+                          Marginer ={"30px"}
+                        />
 
-                      <BrandLogo
-                        logoSize={isMobile ? 40 : 65}
-                        textSize={isMobile ? 35 : 55}
-                      />
-                      <h1>{id}</h1>
-                      <Marginer direction="vertical" margin={8} />
-                      <SloganText>The Mads: </SloganText>
-                      <SloganText>{title}</SloganText>
-                      <Marginer direction="vertical" margin={15} />
-                      <Link to="/customer/access/signup">
-                        <Button>Join Now</Button>
-                      </Link>
+                        <Marginer direction="vertical" margin={15} />
 
-                      {/* <TopSectionInnerContainer  */}
-                      {/* style={ {width: "50%"}} */}
-                      {/* > */}
-                      {/* <LogoContainer> */}
+                      
 
-                      {/* </LogoContainer> */}
-                      {/* </TopSectionInnerContainer> */}
-                    </card>
+                        
+
+                        <SloganText>{title}</SloganText>
+                        <Marginer direction="vertical" margin={15} />
+                        <Link to="/customer/access/signup">
+                          <Button>Join Now</Button>
+                        </Link>
+                      </div>
+                    </ServiceThumbnail>
+                    <ServiceThumbnail>
+                    {detail}
+                    </ServiceThumbnail>
                   </Paper>
+                </Grid>
 
-                  <col span={5}></col>
-                </Grid>
-                <Grid item xs={1}>
-                  {/* <Paper className={classes.paper}>xs=3</Paper> */}
-                </Grid>
+                <col span={5}></col>
+
+                <Grid item xs={1}></Grid>
               </Grid>
             </StyledInnerContainer>
           </BackgroundFilter>

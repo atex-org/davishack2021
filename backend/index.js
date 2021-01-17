@@ -27,6 +27,10 @@ connectDatabase();
 const {
   loadEventController, loadEventControllerById
 } = require('../backend/controllers/eventController');
+
+const {
+  loadRankingController, loadRankingControllerById
+} = require('../backend/controllers/rankingController');
 //Hoan
 
 var port = process.env.PORT || 7000;        // set our port
@@ -46,10 +50,10 @@ router.use(function(req, res, next) {
 
 app.use('/api', router);
 router.route('/events').get(loadEventController);
-router.route('/events').get(loadEventController);
 router.route('/events/:id').get(loadEventControllerById);
 
-
+router.route('/ranking').get(loadRankingController);
+router.route('/ranking/:id').get(loadRankingControllerById);
 
 
 // User

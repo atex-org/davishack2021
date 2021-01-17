@@ -16,6 +16,9 @@ const eventSchema = mongoose.Schema({
     thumbnailUrl: {
         type: String, 
     },
+    detail: {
+        type: String, 
+    },
     host: {
         type: Array, 
     },
