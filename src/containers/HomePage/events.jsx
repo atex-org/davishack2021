@@ -40,7 +40,7 @@ const WarningText = styled.h3`
 const ViewMoreButton = styled(Button)`
   background-color: #f2f2f2;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
-  color: #959595; 
+  color: #959595;
   font-size: 14px;
 
   &:hover {
@@ -60,12 +60,13 @@ export function Event(props) {
 
   const fetchEvent = async () => {
     setLoading(true);
-
-    const response = await Axios.get("http://localhost:5000/api/events" || 'https://atex.org/api/events' ).catch(
-      (err) => {
-        console.log("Error: ", err);
-      }
-    );
+    var port = process.env.PORT || 7000;
+    const response = await Axios.get(
+      "http://localhost:" + port + "/api/events" ||
+        "https://atex.org/api/events"
+    ).catch((err) => {
+      console.log("Error: ", err);
+    });
 
     if (response) {
       setEvent(response.data);

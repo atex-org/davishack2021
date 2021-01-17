@@ -79,7 +79,6 @@ const ServiceThumbnail = styled.div`
   }
 `;
 
-
 const StyledInnerContainer = styled(InnerPageContainer)`
   margin-top: 4em;
 `;
@@ -118,9 +117,11 @@ export function EventDetail(props) {
   const isEventEmpty =
     !offeredEvent || (offeredEvent && offeredEvent.length === 0);
 
+  var port = process.env.PORT || 7001;
   const fetchEvent = async () => {
     const response = await Axios.get(
-      "http://localhost:5000/api/events/" + id || 'https://atex.org/api/events/' + id
+      "http://localhost:" + port + "/api/events/" + id ||
+        "https://atex.org/api/events/" + id
     ).catch((err) => {
       console.log("Error: ", err);
     });
@@ -150,63 +151,58 @@ export function EventDetail(props) {
       <InnerPageContainer>
         <React.Fragment>
           <BackgroundFilter>
-          <StyledInnerContainer alignItems="left">
-            <Grid
-              container
-              alignItems="center"
-              className={classes.grid}
-            >
-              <Grid item xs={1}>
-                {/* <Paper className={classes.paper}>xs=3</Paper> */}
-              </Grid>
+            <StyledInnerContainer alignItems="left">
+              <Grid container alignItems="center" className={classes.grid}>
+                <Grid item xs={1}>
+                  {/* <Paper className={classes.paper}>xs=3</Paper> */}
+                </Grid>
 
-              <Grid item xs={10} alignItems="center">
-             
-                <Paper className={classes.paper} alignItems="left" elevation={3}>
-                  <card>
-                    <ServiceThumbnail>
-                      <img src={thumbnailUrl} alt={title} />
-                    </ServiceThumbnail>
-              
-                    <BrandLogo
-                          logoSize={isMobile ? 40 : 65}
-                          textSize={isMobile ? 35 : 55}
-                        />
-                        <h1>{id}</h1>
-                        <Marginer direction="vertical" margin={8} />
-                        <SloganText>The Mads: </SloganText>
-                        <SloganText>{title}</SloganText>
-                        <Marginer direction="vertical" margin={15} />
-                        <Link to="/customer/access/signup">
-                          <Button>Join Now</Button>
-                        </Link>
-                   
-                    {/* <TopSectionInnerContainer  */}
+                <Grid item xs={10} alignItems="center">
+                  <Paper
+                    className={classes.paper}
+                    alignItems="left"
+                    elevation={3}
+                  >
+                    <card>
+                      <ServiceThumbnail>
+                        <img src={thumbnailUrl} alt={title} />
+                      </ServiceThumbnail>
+
+                      <BrandLogo
+                        logoSize={isMobile ? 40 : 65}
+                        textSize={isMobile ? 35 : 55}
+                      />
+                      <h1>{id}</h1>
+                      <Marginer direction="vertical" margin={8} />
+                      <SloganText>The Mads: </SloganText>
+                      <SloganText>{title}</SloganText>
+                      <Marginer direction="vertical" margin={15} />
+                      <Link to="/customer/access/signup">
+                        <Button>Join Now</Button>
+                      </Link>
+
+                      {/* <TopSectionInnerContainer  */}
                       {/* style={ {width: "50%"}} */}
-                    {/* > */}
+                      {/* > */}
                       {/* <LogoContainer> */}
-                        
+
                       {/* </LogoContainer> */}
-                    {/* </TopSectionInnerContainer> */}
-                  
-                  </card>
-                </Paper>
-                
-                <col span={5}>
-                </col>
-                
+                      {/* </TopSectionInnerContainer> */}
+                    </card>
+                  </Paper>
+
+                  <col span={5}></col>
+                </Grid>
+                <Grid item xs={1}>
+                  {/* <Paper className={classes.paper}>xs=3</Paper> */}
+                </Grid>
               </Grid>
-              <Grid item xs={1}>
-                {/* <Paper className={classes.paper}>xs=3</Paper> */}
-              </Grid>
-            </Grid>
-          </StyledInnerContainer>
+            </StyledInnerContainer>
           </BackgroundFilter>
         </React.Fragment>
       </InnerPageContainer>
       <Footer />
     </TopSectionContainer>
-    
   );
 }
 const BlurredImageContainer = styled.div`

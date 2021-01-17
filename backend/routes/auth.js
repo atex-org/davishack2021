@@ -18,19 +18,18 @@ const { rules: loginRules } = require('../validators/auth/login')
 const { auth } = require('../middlewares/auth')
 const router = express.Router();
 
+//Hoan comment
 
+// router.post('/signup', [registrationRules, validate], signupController)
+// router.get('api/currentuser',auth,currentUser);
 
-router.post('/signup', [registrationRules, validate], signupController)
-router.get('api/currentuser',auth,currentUser);
+// router.post('/signin', [loginRules, validate], signinController)
 
-router.post('/signin', [loginRules, validate], signinController)
+// // router.post('/', loadEventController)
+// router.get('/events', loadEventController)
 
-//Hoan
-// router.post('/', loadEventController)
-router.get('/events', loadEventController)
+// router.get('api/events/:id',loadEventControllerById)
 
-router.get('api/events/:id',loadEventControllerById)
-
-//Hoan
+//Hoan comment
 
 module.exports = router; 
