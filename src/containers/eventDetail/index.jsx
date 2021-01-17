@@ -143,7 +143,7 @@ export function EventDetail(props) {
   const fetchEvent = async () => {
     const response = await Axios.get(
       "https://atex.org/api/events/" + id ||
-        "http://localhost:7001/api/events/" + id
+        "http://localhost:7002/api/events/" + id
     ).catch((err) => {
       console.log("Error: ", err);
     });
