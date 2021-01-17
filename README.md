@@ -1,10 +1,11 @@
 ### Hi there, We are ATEX - [website] 👋
+[![Website](https://img.shields.io/badge/Website-atex.org-brightgreen)](https://atex.org)
 <br />
 Website: https://atex.org
 <br />
 Or       https://atexweb.space/
 <br />
-[![Website](https://img.shields.io/badge/Website-atex.org-brightgreen)](https://atex.org)
+
 
 ![hackdavis](https://user-images.githubusercontent.com/60949882/104137982-eba68980-536e-11eb-9382-69c613070a4b.gif)
 
