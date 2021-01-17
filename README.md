@@ -94,7 +94,7 @@ Or:      http://atexweb.space/
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_4.png"></code>
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_6.png"></code>
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_7.png"></code>
-<code><img height="350"  weight="80" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_8.png"></code>
+<code><img height="350"  width="60" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_8.png"></code>
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_9.png"></code>
 
 ############################################################################################################################################################
