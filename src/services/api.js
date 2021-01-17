@@ -3,7 +3,7 @@ import store from '../store'
 import { logout } from '../store/actions/auth'
 
 const API = axios.create({
-    baseURL: 'http://localhost:8000' || 'https://atex.org',
+    baseURL: 'http://localhost:8000' || '34.94.79.201:8000',
     withCredentials: false,
     headers: {
         'Accept': 'application/json',

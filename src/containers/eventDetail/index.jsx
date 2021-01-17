@@ -120,7 +120,7 @@ export function EventDetail(props) {
 
   const fetchEvent = async () => {
     const response = await Axios.get(
-      "http://localhost:8000/events/" + id || 'https://atex.org/events/' + id
+      "http://localhost:8000/events/" + id || '34.94.79.201:8000/events/' + id
     ).catch((err) => {
       console.log("Error: ", err);
     });
