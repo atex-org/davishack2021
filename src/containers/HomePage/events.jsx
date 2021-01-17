@@ -60,7 +60,8 @@ export function Event(props) {
 
   const fetchEvent = async () => {
     setLoading(true);
-    const response = await Axios.get("http://localhost:8000/events").catch(
+
+    const response = await Axios.get("http://localhost:5000/events" || 'https://atex.org/events' ).catch(
       (err) => {
         console.log("Error: ", err);
       }
