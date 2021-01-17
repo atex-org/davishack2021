@@ -1,4 +1,6 @@
 ### Hi there, We are ATEX - [website] 👋
+Website: https://atex.org
+Or:      http://atexweb.space/
 [![Website](https://img.shields.io/badge/Website-atex.org-brightgreen)](https://atex.org)
 
 ![hackdavis](https://user-images.githubusercontent.com/60949882/104137982-eba68980-536e-11eb-9382-69c613070a4b.gif)
@@ -86,6 +88,14 @@
 
 [website]: atex.org
 
+<code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_1.png"></code>
+<code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_2.png"></code>
+<code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_3.png"></code>
+<code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_4.png"></code>
+<code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_6.png"></code>
+<code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_7.png"></code>
+<code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_8.png"></code>
+<code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_9.png"></code>
 
 ############################################################################################################################################################
 # Getting Started with Create React App
