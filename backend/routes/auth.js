@@ -21,7 +21,7 @@ const router = express.Router();
 
 
 router.post('/signup', [registrationRules, validate], signupController)
-router.get('/currentuser',auth,currentUser);
+router.get('api/currentuser',auth,currentUser);
 
 router.post('/signin', [loginRules, validate], signinController)
 
@@ -29,7 +29,7 @@ router.post('/signin', [loginRules, validate], signinController)
 // router.post('/', loadEventController)
 router.get('/events', loadEventController)
 
-router.get('/events/:id',loadEventControllerById)
+router.get('api/events/:id',loadEventControllerById)
 
 //Hoan
 

@@ -23,9 +23,49 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(authRoute);
 connectDatabase(); 
 
-const port = process.env.PORT || 7000
+// Hoan
+const {
+  loadEventController, loadEventControllerById
+} = require('../backend/controllers/eventController');
+//Hoan
 
-app.set('port', process.env.PORT || 3000);
-app.set('host', "localhost" || '34.94.79.201');
+var port = process.env.PORT || 7000;        // set our port
 
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+// ROUTES FOR OUR API
+// =============================================================================
+var router = express.Router();             
+
+//Hoan
+
+router.use(function(req, res, next) {
+  // do logging
+  console.log('Something is happening.');
+  next(); 
+});
+
+
+app.use('/api', router);
+router.route('/events').get(loadEventController);
+router.route('/events').get(loadEventController);
+router.route('/events/:id').get(loadEventControllerById);
+
+// User
+const {
+  signupController,
+  signinController,
+  currentUser
+} = require('../backend/controllers/authController');
+
+const { validate } = require('../backend/validators')
+const { rules: registrationRules } = require('../backend/validators/auth/register')
+const { rules: loginRules } = require('../backend/validators/auth/login')
+const { auth } = require('../backend/middlewares/auth')
+
+router.route('/signup').post([registrationRules, validate], signupController);
+router.route('/currentuser').get(auth,currentUser);
+router.route('/signin').post([loginRules, validate], signinController)
+
+// START THE SERVER
+// =============================================================================
+app.listen(port);
+console.log('Magic happens on port ' + port);
