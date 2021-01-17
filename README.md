@@ -95,7 +95,7 @@ Or:      http://atexweb.space/
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_5.png"></code>
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_6.png"></code>
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_7.png"></code>
-<code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/mobile_8.png"></code>
+
 ############################################################################################################################################################
 # Getting Started with Create React App
 
