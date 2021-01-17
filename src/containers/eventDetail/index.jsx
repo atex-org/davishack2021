@@ -118,8 +118,8 @@ export function EventDetail(props) {
     !offeredEvent || (offeredEvent && offeredEvent.length === 0);
   const fetchEvent = async () => {
     const response = await Axios.get(
-      "http://localhost:" + "7001" + "/api/events/" + id ||
-        "https://atex.org/api/events/" + id
+      "http://atex.org/api/events/" + id ||
+      "http://localhost:7001/api/events/" + id
     ).catch((err) => {
       console.log("Error: ", err);
     });
