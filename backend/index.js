@@ -49,6 +49,9 @@ router.route('/events').get(loadEventController);
 router.route('/events').get(loadEventController);
 router.route('/events/:id').get(loadEventControllerById);
 
+
+
+
 // User
 const {
   signupController,
@@ -64,6 +67,9 @@ const { auth } = require('../backend/middlewares/auth')
 router.route('/signup').post([registrationRules, validate], signupController);
 router.route('/currentuser').get(auth,currentUser);
 router.route('/signin').post([loginRules, validate], signinController)
+
+
+
 
 // START THE SERVER
 // =============================================================================

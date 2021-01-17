@@ -116,11 +116,9 @@ export function EventDetail(props) {
 
   const isEventEmpty =
     !offeredEvent || (offeredEvent && offeredEvent.length === 0);
-
-  var port = process.env.PORT || 7001;
   const fetchEvent = async () => {
     const response = await Axios.get(
-      "http://localhost:" + port + "/api/events/" + id ||
+      "http://localhost:" + "7001" + "/api/events/" + id ||
         "https://atex.org/api/events/" + id
     ).catch((err) => {
       console.log("Error: ", err);
