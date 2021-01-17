@@ -62,7 +62,7 @@ export function Event(props) {
     setLoading(true);
     const response = await Axios.get(
       "https://atex.org/api/events" ||
-      "http://localhost:7001" + "/api/events"
+      "http://localhost:7002" + "/api/events"
     ).catch((err) => {
       console.log("Error: ", err);
     });
