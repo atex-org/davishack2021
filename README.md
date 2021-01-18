@@ -95,7 +95,7 @@ Or       https://atexweb.space/
 <br/>
 
 
-Download our app: <a id="raw-url" href="https://github.com/atex-org/davishack2021/raw/main/demo/atex.org.apk">![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)(/images/logo.png)</a>
+Download our app: <a id="raw-url" href="https://github.com/atex-org/davishack2021/raw/main/demo/atex.org.apk">![Image of Yaktocat](https://)</a>
 <br/>
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/android_1.png"></code>
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/android_2.png"></code>
