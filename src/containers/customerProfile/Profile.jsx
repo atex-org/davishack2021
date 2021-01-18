@@ -19,6 +19,7 @@ const user = {
   country: 'USA',
   jobTitle: 'Senior Developer',
   name: 'Hoan Pham',
+  rating: '120 stars',
   timezone: 'GTM-7'
 };
 
@@ -60,6 +61,12 @@ const Profile = ({ className, ...rest }) => {
             variant="body1"
           >
             {`${user.city} ${user.country}`}
+          </Typography>
+          <Typography
+            color="textSecondary"
+            variant="body1"
+          > You are currently have
+            {`${user.rating}`}
           </Typography>
           <Typography
             className={classes.dateText}

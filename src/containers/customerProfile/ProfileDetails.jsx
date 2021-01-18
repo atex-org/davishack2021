@@ -39,6 +39,7 @@ const ProfileDetails = ({ className, ...rest }) => {
     lastName: 'Pham',
     email: 'HoanPham@gmail.com',
     phone: '',
+    rating:'120 stars',
     state: 'California',
     country: 'USA'
   });

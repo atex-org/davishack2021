@@ -152,7 +152,7 @@ export function Navbar(props) {
             <SearchIcon />
           </div>
           <InputBase
-            placeholder="Search…"
+            placeholder="Search events"
             classes={{
               root: classes.inputRoot,
               input: classes.inputInput,
