@@ -5,13 +5,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CustomerAccessPage } from "./containers/customerAccessPage";
 import { AppDetail } from "./components/ourApp/";
 import { EventDetail } from "./containers/eventDetail";
+import { CustomerProfile } from "./containers/customerProfile/index";
 import {useDispatch, useSelector} from 'react-redux'; 
 import {loadUser} from './store/actions/auth';
 
 function App() {
   const dispatch = useDispatch(); 
 
-  
+
   useEffect(() => {
     dispatch(loadUser()); 
   }, [])
@@ -32,6 +33,10 @@ function App() {
            <Route
             path="/customer/eventDetail/:id"
             component={EventDetail}
+          />
+           <Route
+            path="/customer/profile/:id"
+            component={CustomerProfile}
           />
         </Switch>
       </Router>

@@ -185,8 +185,8 @@ export function Navbar(props) {
         ):(
           <>
           <Marginer direction="horizontal" margin={10} />
-          <Link to="/customer/profile" ><p style={{ 'font-size': '12px',
-                                                          'color': '#fff'}}></p></Link>
+          <Link to="/customer/profile/12" ><p style={{ 'font-size': '12px',
+                                                          'color': '#fff'}}>HoanPham@gmail.com </p></Link>
           <p onClick={logoutUser} style={{ 'font-size': '12px',
                                                           'color': '#fff',
                                                           'cursor' : 'pointer'
