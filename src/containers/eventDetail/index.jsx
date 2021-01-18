@@ -232,7 +232,7 @@ export function EventDetail(props) {
                         <Marginer direction="vertical" margin={15} />
                         <div style={stylesButton} id="idFollow">
                           <Link onClick={submitFollow} >
-                            <Button>Join Now and Get 200 <FontAwesomeIcon icon={faStar} size="sm" /></Button>
+                            <Button>Follow the event and submit the evidents in your app to get $100 <FontAwesomeIcon icon={faStar} size="sm" /></Button>
                           </Link>
 
                         </div>
@@ -244,7 +244,7 @@ export function EventDetail(props) {
                         </div>
                         <div style={stylesButtonFollowed} id="idFollowed">
                           <Link onClick={submitFollow} >
-                            <Button>Followed by you, loc_tran and 2 others <FontAwesomeIcon icon={faStar} size="sm" /></Button>
+                            <Button>Followed by you, and 2 others <FontAwesomeIcon icon={faStar} size="sm" /></Button>
                           </Link>
 
                         </div>

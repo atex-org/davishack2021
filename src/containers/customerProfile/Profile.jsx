@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import {
   Avatar,
   Box,
@@ -19,7 +21,7 @@ const user = {
   country: 'USA',
   jobTitle: 'Senior Developer',
   name: 'Hoan Pham',
-  rating: '120 stars',
+  rating: '200',
   timezone: 'GTM-7'
 };
 
@@ -65,8 +67,11 @@ const Profile = ({ className, ...rest }) => {
           <Typography
             color="textSecondary"
             variant="body1"
-          > You are currently have
-            {`${user.rating}`}
+          >
+            <FontAwesomeIcon icon={faStar} size="sm" /> 
+          You are currently have $
+            {`${user.rating}`} 
+            
           </Typography>
           <Typography
             className={classes.dateText}
