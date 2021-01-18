@@ -95,7 +95,9 @@ Or       https://atexweb.space/
 <br/>
 
 
-Download our app: <a id="raw-url" href="https://github.com/atex-org/davishack2021/raw/main/demo/atex.org.apk">![Download Atex App](https://github.com/atex-org/davishack2021/raw/main/demo/download.png)</a>
+Download our app: 
+
+<a id="raw-url" href="https://github.com/atex-org/davishack2021/raw/main/demo/atex.org.apk"><img width ="100" src="https://github.com/atex-org/davishack2021/raw/main/demo/download.png"></a>
 <br/>
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/android_1.png"></code>
 <code><img height="400" src="https://github.com/atex-org/davishack2021/raw/main/demo/android_2.png"></code>
