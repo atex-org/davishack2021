@@ -116,16 +116,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 export function Navbar(props) {
  
-
   const dispatch = useDispatch()
 
   const isLoggedIn = useSelector(state => state.authReducer.isLoggedIn)
   const stat = useSelector(state => state.authReducer)
   
   const { useTransparent } = props;
-
   const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 // HOan
   const classes = useStyles();
@@ -185,6 +185,8 @@ export function Navbar(props) {
         ):(
           <>
           <Marginer direction="horizontal" margin={10} />
+          <Link to="/customer/profile" ><p style={{ 'font-size': '12px',
+                                                          'color': '#fff'}}></p></Link>
           <p onClick={logoutUser} style={{ 'font-size': '12px',
                                                           'color': '#fff',
                                                           'cursor' : 'pointer'

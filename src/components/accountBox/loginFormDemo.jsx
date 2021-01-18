@@ -16,7 +16,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from "react-router-dom";
 import { AccountContext } from "./context";
 import { login } from '../../store/actions/auth'
-import { BrandLogo } from "../../components/brandLogo";
 
 function Copyright() {
   return (

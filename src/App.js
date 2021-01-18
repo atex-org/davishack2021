@@ -11,7 +11,7 @@ import {loadUser} from './store/actions/auth';
 function App() {
   const dispatch = useDispatch(); 
 
-
+  
   useEffect(() => {
     dispatch(loadUser()); 
   }, [])
